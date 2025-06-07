@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/manniefesto/slippilab-uploader-discord-bot/issues"
   },
-  "homepage": "https://github.com/manniefesto/slippilab-uploader-discord-bot#readme"
+  "homepage": "https://github.com/manniefesto/slippilab-uploader-discord-bot#readme",
+  "dependencies": {
+    "discord.js": "^14.19.3"
+  }
 }
