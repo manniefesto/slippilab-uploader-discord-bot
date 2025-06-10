@@ -19,7 +19,7 @@ jobs:
         uses: digitalocean/app_action/deploy@v2
         envs:
         - key: DISCORD_TOKEN
-          value: ${secrets.DISCORD_TOKEN}
+          value: ${{ secrets.DISCORD_TOKEN }}
           type: SECRET
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
