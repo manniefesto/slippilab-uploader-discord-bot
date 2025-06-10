@@ -32,7 +32,8 @@ export function execute(message) {
             if (fileExtension.toLowerCase() == 'slp') {
                 var uploadResponse = await downloadAndUploadFile(attachment.url, 'https://slippilab.com/api/replay');
                 if (uploadResponse != undefined && uploadResponse.id != undefined) {
-                    message.reply(`${message.author.username}:${message.guild.name} - Replay uploaded successfully! ID: https://slippilab.com/${uploadResponse.id}`);
+                    message.reply(`$Replay uploaded successfully! ID: https://slippilab.com/${uploadResponse.id}`);
+                    console.log(`Replay uploaded successfully! ID: ${uploadResponse.id}, ${message.author.username}:${message.guild.name}`);
                 }
             }
         });
