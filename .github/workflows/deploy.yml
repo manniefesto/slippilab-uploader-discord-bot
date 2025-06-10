@@ -1,4 +1,4 @@
-name: Release
+name: Deploy
 on:
   release:
     types: [published]
@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   release:
-    name: Release
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
