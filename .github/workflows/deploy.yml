@@ -1,0 +1,25 @@
+name: Release
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read # for checkout
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Deploy the app
+        uses: digitalocean/app_action/deploy@v2
+        envs:
+        - key: DISCORD_TOKEN
+          value: ${{ secrets.DISCORD_TOKEN }}
+          type: SECRET
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
