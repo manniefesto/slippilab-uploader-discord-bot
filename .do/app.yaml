@@ -5,6 +5,10 @@ features:
 - buildpack-stack=ubuntu-22
 ingress: {}
 name: slippilab-uploader-bot
+envs:
+  - key: DISCORD_TOKEN
+    value: ${DISCORD_TOKEN}
+    type: SECRET
 region: lon
 workers:
 - dockerfile_path: /Dockerfile
