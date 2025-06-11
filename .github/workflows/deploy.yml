@@ -17,9 +17,7 @@ jobs:
           fetch-depth: 0
       - name: Deploy the app
         uses: digitalocean/app_action/deploy@v2
-        envs:
-        - key: DISCORD_TOKEN
-          value: ${{ secrets.DISCORD_TOKEN }}
-          type: SECRET
+        env:
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
